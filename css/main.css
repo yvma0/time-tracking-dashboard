@@ -10,14 +10,46 @@ html {
 img { max-width: 100%; }
 /* ================== */
 
+body{
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    font-size: 1.8rem;
+}
 
+.user{
+    margin: 20px auto;
+}
+
+.user>img{
+    float: left;
+    border: medium solid white;
+    border-radius: 50%;
+    width: 80px;
+}
+
+main>div{
+    background-color: hsl(235, 46%, 20%);
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: hsl(235, 45%, 61%);
+}
+a:hover, a:focus{
+    color: white;
+}
 
 
 
 footer {
     font-size: 11px;
     text-align: center;
-}
-footer a {
-    color: hsl(228, 45%, 44%);
 }
