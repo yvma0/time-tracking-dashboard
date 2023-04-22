@@ -1,0 +1,23 @@
+/* === GLOBAL CSS === */
+html {
+    box-sizing: border-box;
+
+    font-size: 62.5%;
+    /* ^ make root fz 10px for neater rem values */
+    /* does not change root px for any element other than text (i.e. spacing rem) */
+}
+*, *::before, *::after { box-sizing: inherit; }
+img { max-width: 100%; }
+/* ================== */
+
+
+
+
+
+footer {
+    font-size: 11px;
+    text-align: center;
+}
+footer a {
+    color: hsl(228, 45%, 44%);
+}
