@@ -47,17 +47,30 @@ a:hover, a:focus{
     color: white;
 }
 
+.card:hover{
+    background-color: hsl(235, 45%, 61%);
+    cursor: pointer;
+}
 
-
-footer {
-    font-size: 11px;
-    text-align: center;
+.category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .ellipses{
     width: 21px;
     height: 5px;
-    vertical-align: middle;
     fill: #BBC0FF;
+}
+.ellipses:hover{
+    fill: white;
+    cursor: pointer;
+}
 
+
+
+footer {
+    font-size: 11px;
+    text-align: center;
 }
