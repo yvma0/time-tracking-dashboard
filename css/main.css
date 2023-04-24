@@ -53,3 +53,11 @@ footer {
     font-size: 11px;
     text-align: center;
 }
+
+.ellipses{
+    width: 21px;
+    height: 5px;
+    vertical-align: middle;
+    fill: #BBC0FF;
+
+}

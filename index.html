@@ -18,6 +18,15 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <!-- ellipsis svg definition -->
+  <svg xmlns="http://www.w3.org/2000/svg" display="none">
+    <defs>
+      <symbol id="icon-ellipsis">
+        <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill-rule="evenodd" />
+      </symbol>
+    </defs>
+  </svg>
+  <!-- end of svg definition -->
   <main>
 
     <div class="user-card">
@@ -34,7 +43,11 @@
     </div>
 
     <div class="card">
-      <p class="category">Work</p>
+      <p class="category">
+        Work
+        <svg class="ellipses"><use xlink:href="#icon-ellipsis"></svg>
+      </p>
+      
       5hrs <!-- daily -->
       Previous - 7hrs <!-- daily -->
       32hrs <!-- weekly -->
@@ -44,7 +57,12 @@
     </div>
 
     <div class="card">
-      <p class="category">Play</p>
+      <p class="category">
+        Play
+        <svg class="ellipses">
+          <use xlink:href="#icon-ellipsis">
+        </svg>
+      </p>
       1hr <!-- daily -->
       Previous - 2hrs <!-- daily -->
       10hrs <!-- weekly -->
@@ -54,7 +72,12 @@
     </div>
 
     <div class="card">
-      <p class="category">Study</p>
+      <p class="category">
+        Study
+        <svg class="ellipses">
+          <use xlink:href="#icon-ellipsis">
+        </svg>
+      </p>
       0hrs <!-- daily -->
       Previous - 1hr <!-- daily -->
       4hrs <!-- weekly -->
@@ -64,7 +87,12 @@
     </div>
 
     <div class="card">
-      <p class="category">Exercise</p>
+      <p class="category">
+        Exercise
+        <svg class="ellipses">
+          <use xlink:href="#icon-ellipsis">
+        </svg>
+      </p>
       1hr <!-- daily -->
       Previous - 1hr <!-- daily -->
       4hrs <!-- weekly -->
@@ -74,7 +102,12 @@
     </div>
 
     <div class="card">
-      <p class="category">Social</p>
+      <p class="category">
+        Social
+        <svg class="ellipses">
+          <use xlink:href="#icon-ellipsis">
+        </svg>
+      </p>
       1hr <!-- daily -->
       Previous - 3hrs <!-- daily -->
       5hrs <!-- weekly -->
@@ -84,7 +117,12 @@
     </div>
 
     <div class="card">
-      <p class="category">Self Care</p>
+      <p class="category">
+        Self Care
+        <svg class="ellipses">
+          <use xlink:href="#icon-ellipsis">
+        </svg>
+      </p>
       0hrs <!-- daily -->
       Previous - 1hr <!-- daily -->
       2hrs <!-- weekly -->
