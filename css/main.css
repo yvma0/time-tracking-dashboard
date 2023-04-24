@@ -47,12 +47,11 @@ a:hover, a:focus{
     color: white;
 }
 
-.card:hover{
-    background-color: hsl(235, 45%, 61%);
-    cursor: pointer;
+.user{
+    background-color: hsl(246, 80%, 60%);
 }
 
-.category{
+.category-txt{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,7 +67,11 @@ a:hover, a:focus{
     cursor: pointer;
 }
 
-
+.card:hover{
+    background-color: hsl(235, 45%, 61%);
+    cursor: pointer;
+}
+/* NOTE - FIGURE OUT HOW TO ISOLATE HOVER STATE B/T CARD AND ELLIPSES */
 
 footer {
     font-size: 11px;
