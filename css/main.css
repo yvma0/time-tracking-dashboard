@@ -29,6 +29,8 @@ body{
 }
 
 main>div{
+    width: 370px;
+    margin: 10px; /* temp */
     background-color: hsl(235, 46%, 20%);
 }
 
@@ -67,15 +69,11 @@ a:hover, a:focus{
     cursor: pointer;
 }
 
-.card{
-    width: 370px;
-    margin: 10px; /* temp */
-}
 
-.card:hover{
+/* .card:hover{
     background-color: hsl(235, 45%, 61%);
     cursor: pointer;
-}
+} */
 /* NOTE - FIGURE OUT HOW TO ISOLATE HOVER STATE B/T CARD AND ELLIPSES */
 /* maybe just..invisible div of the exact same shape and size that appears when time-txt is hovered and disappears when category-txt is? so u can do the 'hover on Everything But' thing andHelp */
 
