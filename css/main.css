@@ -27,16 +27,14 @@ body{
     font-size: 1.8rem;
 }
 
-main>div{
-    width: 37rem;
-    margin: 20px auto;
-    border-radius: 1.5rem;
+header{
+    background-color: var(--dark-blue);
 }
 
 ul{
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: var(--card-padding) 0;
     display: flex;
     justify-content: space-around;
 }
@@ -48,55 +46,88 @@ a:hover, a:focus{
     color: white;
 }
 
-.user-card{
-    background-color: var(--dark-blue);
+button{
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
-.user{
-    border-radius: 1.5rem;
-    background-color: var(--primary-blue);
-    padding: 2rem;
-}
-.user>img{
-    float: left;
-    border: medium solid white;
-    border-radius: 50%;
-    width: 80px;
+button:hover > svg{
+    fill: white;
 }
 
-.card:nth-of-type(2){
+/* personal notes--
+general bg syntax order:
+   1. bg-image
+   2. bg-pos
+   3. bg-size
+   4. bg-repeat
+   5. bg-attachment
+   6. bg-origin
+   7. bg-clip
+   8. bg-color
+*/
+
+section:nth-of-type(1){
     background-color: hsl(15, 100%, 70%);
-    /* general bg syntax order
-       1. bg-image
-       2. bg-pos
-       3. bg-size
-       4. bg-repeat
-       5. bg-attachment
-       6. bg-origin
-       7. bg-clip
-       8. bg-color */
     background-image: url(../images/icon-work.svg);
-    background-repeat: no-repeat;
-    background-position: right calc(var(--card-padding) - 0.5rem) top -1rem;
-    padding-top: 4rem;
-}
-.card:nth-of-type(3){
-    background-color: hsl(195, 74%, 62%);
-    background-image: url(../images/icon-play.svg);
         background-repeat: no-repeat;
         background-position: right calc(var(--card-padding) - 0.5rem) top -1rem;
         padding-top: 4rem;
 }
-.card:nth-of-type(4){
+section:nth-of-type(2){
+    background-color: hsl(195, 74%, 62%);
+    background-image: url(../images/icon-play.svg);
+        background-repeat: no-repeat;
+        background-position: right calc(var(--card-padding) - 0.5rem) top -0.3rem;
+        padding-top: 4rem;
+}
+section:nth-of-type(3){
     background-color: hsl(348, 100%, 68%);
+    background-image: url(../images/icon-study.svg);
+        background-repeat: no-repeat;
+        background-position: right calc(var(--card-padding) - 0.5rem) top -0.6rem;
+        padding-top: 4rem;
 }
-.card:nth-of-type(5){
+section:nth-of-type(4){
     background-color: hsl(145, 58%, 55%);
+    background-image: url(../images/icon-exercise.svg);
+        background-repeat: no-repeat;
+        background-position: right calc(var(--card-padding) - 0.5rem) top;
+        padding-top: 4rem;
 }
-.card:nth-of-type(6){
+section:nth-of-type(5){
     background-color: hsl(264, 64%, 52%);
+    background-image: url(../images/icon-social.svg);
+        background-repeat: no-repeat;
+        background-position: right calc(var(--card-padding) - 0.5rem) top -1.45rem;
+        padding-top: 4rem;
 }
-.card:nth-of-type(7){
+section:nth-of-type(6){
     background-color: hsl(43, 84%, 65%);
+    background-image: url(../images/icon-self-care.svg);
+        background-repeat: no-repeat;
+        background-position: right calc(var(--card-padding) - 0.5rem) top -1rem;
+        padding-top: 4rem;
+}
+
+.card{
+    width: 37rem;
+    margin: 20px auto;
+    border-radius: 1.5rem;
+}
+.user{
+    background-color: var(--primary-blue);
+    border-radius: 1.5rem;
+    padding: var(--card-padding);
+
+    display:flex; 
+}
+.user>img{
+    border: medium solid white;
+    border-radius: 50%;
+    width: 7.5rem;
+    margin: .5rem;
 }
 
 .card-on-card{
@@ -108,17 +139,13 @@ a:hover, a:focus{
 .category-txt{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .ellipses{
-    width: 21px;
-    height: 5px;
+    width: 2.1rem;
+    height: 0.5rem;
     fill: var(--pale-blue);
-}
-.ellipses:hover{
-    fill: white;
-    cursor: pointer;
+    vertical-align: middle;
 }
 
 
