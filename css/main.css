@@ -29,19 +29,25 @@ body{
 
 /* font styling */
 small{
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     font-weight: 400;
     color: var(--pale-blue);
 }
 h2{
     font-weight: 300;
-    font-size: 1.4em;
+    font-size: 2.5rem;
     line-height: 1.25;
     margin: 0;
 }
 h3{
     font-weight: 500;
     font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
+}
+p{
+    font-weight: 300;
+    font-size: 3rem;
     line-height: 1.5;
     margin: 0;
 }
@@ -72,7 +78,8 @@ button{
     border: none;
     cursor: pointer;
 }
-button:hover > svg{
+button:hover > svg,
+button:focus > svg{
     fill: white;
 }
 
@@ -132,8 +139,8 @@ section:nth-of-type(6){
 }
 
 .card{
-    width: 34.5rem;
-    margin: 20px auto;
+    width: 34rem;
+    margin: 2.5rem auto;
     border-radius: 1.5rem;
 }
 .user{
@@ -157,9 +164,10 @@ section:nth-of-type(6){
     padding: var(--card-padding);
 }
 
-.category-txt{
+.center-txt{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .ellipses{
