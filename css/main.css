@@ -178,14 +178,24 @@ section:nth-of-type(6){
 }
 
 
-/* .card:hover{
-    background-color: hsl(235, 45%, 61%);
+.card-on-card:hover{
+    background-color: hsl(235, 43%, 36%);
     cursor: pointer;
-} */
+}
 /* NOTE - FIGURE OUT HOW TO ISOLATE HOVER STATE B/T CARD AND ELLIPSES */
 /* maybe just..invisible div of the exact same shape and size that appears when time-txt is hovered and disappears when category-txt is? so u can do the 'hover on Everything But' thing andHelp */
 
 footer {
     font-size: 11px;
     text-align: center;
+}
+
+/* NOTE - media queries for desktop ver here */
+/* - consider clamp for font size */
+/* - figure out grid..... */
+@media(min-width:650px){
+    main{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
 }
