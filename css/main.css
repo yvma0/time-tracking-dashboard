@@ -16,7 +16,7 @@ img { max-width: 100%; }
     --dark-blue: hsl(235, 46%, 20%);
     --desaturated-blue: hsl(235, 45%, 61%);
     --pale-blue: hsl(236, 100%, 87%);
-    --card-padding: 2.45rem;
+    --card-padding: 2.5rem;
 }
 /* ================== */
 
@@ -35,7 +35,7 @@ small{
 }
 h2{
     font-weight: 300;
-    font-size: 2.5rem;
+    font-size: 2.45rem;
     line-height: 1.25;
     margin: 0;
 }
@@ -95,51 +95,48 @@ general bg syntax order:
    8. bg-color
 */
 
+section{
+    padding-top: 3.9rem;
+}
 section:nth-of-type(1){
     background-color: hsl(15, 100%, 70%);
     background-image: url(../images/icon-work.svg);
         background-repeat: no-repeat;
         background-position: right calc(var(--card-padding) - 0.5rem) top -1.1rem;
-        padding-top: 3.9rem;
 }
 section:nth-of-type(2){
     background-color: hsl(195, 74%, 62%);
     background-image: url(../images/icon-play.svg);
         background-repeat: no-repeat;
         background-position: right calc(var(--card-padding) - 0.5rem) top -0.5rem;
-        padding-top: 3.9rem;
 }
 section:nth-of-type(3){
     background-color: hsl(348, 100%, 68%);
     background-image: url(../images/icon-study.svg);
         background-repeat: no-repeat;
         background-position: right calc(var(--card-padding) - 0.5rem) top -0.6rem;
-        padding-top: 3.9rem;
 }
 section:nth-of-type(4){
     background-color: hsl(145, 58%, 55%);
     background-image: url(../images/icon-exercise.svg);
         background-repeat: no-repeat;
         background-position: right calc(var(--card-padding) - 0.5rem) top;
-        padding-top: 3.9rem;
 }
 section:nth-of-type(5){
     background-color: hsl(264, 64%, 52%);
     background-image: url(../images/icon-social.svg);
         background-repeat: no-repeat;
         background-position: right calc(var(--card-padding) - 0.5rem) top -1.45rem;
-        padding-top: 3.9rem;
 }
 section:nth-of-type(6){
     background-color: hsl(43, 84%, 65%);
     background-image: url(../images/icon-self-care.svg);
         background-repeat: no-repeat;
         background-position: right calc(var(--card-padding) - 0.5rem) top -1rem;
-        padding-top: 3.9rem;
 }
 
 .card{
-    width: 34rem;
+    width: 33rem;
     margin: 2.5rem auto;
     border-radius: 1.5rem;
 }
@@ -154,8 +151,8 @@ section:nth-of-type(6){
     border: medium solid white;
     border-radius: 50%;
     aspect-ratio: 1/1;
-    width: 7.2rem;
-    margin-right: 2rem;
+    width: 7rem;
+    margin-right: 1.8rem;
 }
 
 .card-on-card{
@@ -194,12 +191,34 @@ footer {
 /* - consider clamp for font size */
 /* - figure out grid..... */
 @media(min-width:650px){
+    /* desktop font modifications */
+    h2{
+        font-size: 3.8rem;
+    }
+    /* ==================== */
+
     main{
         display: grid;
+        align-items: end;
         grid-template-columns: repeat(4,1fr);
+        max-width: 90vw;
+        margin: 0 auto;
     }
 
     header{
         grid-row: span 2;
+    }
+
+    ul{
+        flex-direction: column;
+    }
+
+    .card{
+        width: 27rem;
+        margin: 0;
+    }
+
+    .user{
+        display: block;
     }
 }
