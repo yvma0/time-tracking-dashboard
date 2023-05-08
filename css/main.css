@@ -191,15 +191,23 @@ footer {
 /* - consider clamp for font size */
 /* - figure out grid..... */
 @media(min-width:650px){
+    body{
+        min-height: 100vh; /* set height of page to viewport height, allowing for vertical centering */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     /* desktop font modifications */
     h2{
         font-size: 3.8rem;
+        line-height: 1.2;
     }
     /* ==================== */
 
     main{
         display: grid;
-        align-items: end;
+        align-items:center;
         grid-template-columns: repeat(4,1fr);
         max-width: 90vw;
         margin: 0 auto;
@@ -211,6 +219,10 @@ footer {
 
     ul{
         flex-direction: column;
+    }
+
+    section{
+        padding-top: 4.5rem;
     }
 
     .card{
