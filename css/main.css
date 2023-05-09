@@ -136,7 +136,7 @@ section:nth-of-type(6){
 }
 
 .card{
-    max-width: 33rem;
+    width: 33rem;
     margin: 2.5rem auto;
     border-radius: 1.5rem;
 }
@@ -198,14 +198,14 @@ footer {
 
     /* desktop font modifications */
     h2{
-        font-size: clamp(2.45rem, 3.5vw, 3.8rem);
+        font-size: clamp(3rem, 3.5vw, 3.8rem);
         line-height: 1.2;
     }
     h3{
         margin-bottom: clamp(.5rem, 1vw, 1rem);
     }
     p{
-        font-size: clamp(4rem, 5vw, 5.5rem);
+        font-size: clamp(4rem, 4.8vw, 5.5rem);
     }
     .center-txt~p{
         flex-direction: column;
@@ -219,6 +219,8 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
         width: min(113rem, 80vw);
         gap: 3rem;
+
+        margin-bottom: 2rem; /* giving footer space after removing card margins */
     }
 
     header{
@@ -227,6 +229,7 @@ footer {
 
     ul{
         flex-direction: column;
+        height: 16rem;
     }
 
     section{
@@ -234,15 +237,16 @@ footer {
     }
 
     .card{
+        width: auto;
         margin: 0;
     }
 
     .user{
-        display: block;
-        padding-bottom: calc(var(--card-padding) * 2.5);
+        flex-direction: column;
+        padding-bottom: calc(var(--card-padding) * 3);
     }
     .user>img{
         width: 8.1rem;
-        margin-bottom: clamp(.5rem, 1vw, 1rem);
+        margin-bottom: clamp(.5rem, 1vw, 1.5rem);
     }
 }
