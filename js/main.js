@@ -24,17 +24,31 @@ dailyBtn.addEventListener('click', showDaily);
 weeklyBtn.addEventListener('click', showWeekly);
 monthlyBtn.addEventListener('click', showMonthly);
 
-/* NOTE: all of these functions assume that the 'text' varaible (aka p.center-txt element) is fetched from their respective cards (work, play, etc.) in the same order as their counterparts are in the data array. Not super futureproof, just the laziest way to go about it */
+/* NOTE: all of these functions assume that the 'text' array (aka p.center-txt element) is fetched from their respective cards (work, play, etc.) in the same order as their counterparts are in the data array. Not super futureproof, just the laziest way to go about it */
 function showDaily(){
     dataArr.forEach((e, i) => {
-
+        let dailyData = e.timeframes.daily;
+        text[i].innerHTML =
+        `${dailyData.current}hrs
+        <small>Yesterday - ${dailyData.previous}hrs</small>`
     });
 }
 
 function showWeekly(){
-
+    dataArr.forEach((e, i) => {
+        let weeklyData = e.timeframes.weekly;
+        text[i].innerHTML =
+        `${weeklyData.current}hrs
+        <small>Last Week - ${weeklyData.previous}hrs</small>`
+    });
 }
 
-function showMonthly(){
 
+function showMonthly(){
+    dataArr.forEach((e, i) => {
+        let monthlyData = e.timeframes.monthly;
+        text[i].innerHTML =
+        `${monthlyData.current}hrs
+        <small>Last Month - ${monthlyData.previous}hrs</small>`
+    });
 }
