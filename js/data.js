@@ -1,4 +1,4 @@
-const data = [
+const dataArr = [
   {
     "title": "Work",
     "timeframes": {

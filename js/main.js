@@ -3,6 +3,7 @@
 // grab..the p tags in each section for changing
 // there should be a way to grab it as an array and feed the json data in through array...? tbc thought
 // maybe also try to figure out isolated hover states in js? when hovering over the svgs...
+console.log(dataArr);
 
 /*===FETCH CARD TEXT TO BE CHANGED===*/
 const text = document.querySelectorAll('p.center-txt');
@@ -19,6 +20,21 @@ const weeklyBtn = nav[1];
 const monthlyBtn = nav[2];
 
 /*===LISTEN FOR CLICKS===*/
-dailyBtn.addEventListener('click', functionPlaceholder);
-weeklyBtn.addEventListener('click', functionPlaceholder);
-monthlyBtn.addEventListener('click', functionPlaceholder);
+dailyBtn.addEventListener('click', showDaily);
+weeklyBtn.addEventListener('click', showWeekly);
+monthlyBtn.addEventListener('click', showMonthly);
+
+/* NOTE: all of these functions assume that the 'text' varaible (aka p.center-txt element) is fetched from their respective cards (work, play, etc.) in the same order as their counterparts are in the data array. Not super futureproof, just the laziest way to go about it */
+function showDaily(){
+    dataArr.forEach((e, i) => {
+
+    });
+}
+
+function showWeekly(){
+
+}
+
+function showMonthly(){
+
+}
