@@ -1,9 +1,6 @@
-// grab daily, weekly, monthly as separate elements probably
-// set onclick events for them...apply an active state or just a style? TBD
-// grab..the p tags in each section for changing
-// there should be a way to grab it as an array and feed the json data in through array...? tbc thought
 // maybe also try to figure out isolated hover states in js? when hovering over the svgs...
-console.log(dataArr);
+
+// console.log(dataArr);
 
 /*===FETCH CARD TEXT TO BE CHANGED===*/
 const text = document.querySelectorAll('p.center-txt');
@@ -11,13 +8,11 @@ const text = document.querySelectorAll('p.center-txt');
 // console.log(text[1]);
 // console.log(text[1].textContent);
 
-/*===FETCH BUTTONS===*/
-//=> NOTE: this selects all 'li's; may mess things up in later (hypothetical) feature
-//   additions if any more li items are added <=
-const nav = document.querySelectorAll('li');
-const dailyBtn = nav[0];
-const weeklyBtn = nav[1];
-const monthlyBtn = nav[2];
+/*===FETCH TAB LINKS===*/
+const tabs = document.getElementsByClassName("tab");
+const dailyBtn = tabs[0];
+const weeklyBtn = tabs[1];
+const monthlyBtn = tabs[2];
 
 /*===LISTEN FOR CLICKS===*/
 dailyBtn.addEventListener('click', showDaily);
@@ -26,6 +21,9 @@ monthlyBtn.addEventListener('click', showMonthly);
 
 /* NOTE: all of these functions assume that the 'text' array (aka p.center-txt element) is fetched from their respective cards (work, play, etc.) in the same order as their counterparts are in the data array. Not super futureproof, just the laziest way to go about it */
 function showDaily(){
+    tabs.forEachEach(e=>e.classList.remove("active")); //remove 'active' class from any other tabs
+    dailyBtn.classList.add("active");
+    //for each item in the js data file's array, collect the appropriate daily/weekly/monthly data and inject it into the card ('text' variable) with the corresponding index
     dataArr.forEach((e, i) => {
         let dailyData = e.timeframes.daily;
         text[i].innerHTML =
@@ -35,6 +33,9 @@ function showDaily(){
 }
 
 function showWeekly(){
+    tabs.forEachEach(e=>e.classList.remove("active")); //remove 'active' class from any other tabs
+    weeklyBtn.classList.add("active");
+    //for each item in the js data file's array, collect the appropriate daily/weekly/monthly data and inject it into the card ('text' variable) with the corresponding index
     dataArr.forEach((e, i) => {
         let weeklyData = e.timeframes.weekly;
         text[i].innerHTML =
@@ -45,6 +46,9 @@ function showWeekly(){
 
 
 function showMonthly(){
+    tabs.forEachEach(e=>e.classList.remove("active")); //remove 'active' class from any other tabs
+    monthlyBtn.classList.add("active");
+    //for each item in the js data file's array, collect the appropriate daily/weekly/monthly data and inject it into the card ('text' variable) with the corresponding index
     dataArr.forEach((e, i) => {
         let monthlyData = e.timeframes.monthly;
         text[i].innerHTML =

@@ -68,7 +68,7 @@ a{
     text-decoration: none;
     color: var(--desaturated-blue);
 }
-a:hover, a:focus{
+a:hover, a:focus, .active{
     color: white;
 }
 
