@@ -179,8 +179,6 @@ section:nth-of-type(6){
     background-color: hsl(235, 43%, 36%);
     cursor: pointer;
 }
-/* NOTE - FIGURE OUT HOW TO ISOLATE HOVER STATE B/T CARD AND ELLIPSES */
-/* maybe just..invisible div of the exact same shape and size that appears when time-txt is hovered and disappears when category-txt is? so u can do the 'hover on Everything But' thing andHelp */
 
 footer {
     font-size: 11px;
