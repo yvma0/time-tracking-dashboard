@@ -1,5 +1,3 @@
-// maybe also try to figure out isolated hover states in js? when hovering over the svgs...
-
 // console.log(dataArr);
 
 /*===FETCH CARD TEXT TO BE CHANGED===*/
@@ -44,7 +42,6 @@ function showWeekly(){
         <small>Last Week - ${weeklyData.previous}hrs</small>`
     });
 }
-
 
 function showMonthly(){
     tabs.forEach(e=>e.classList.remove("active")); //remove 'active' class from all tabs
